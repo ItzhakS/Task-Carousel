@@ -5,6 +5,8 @@
   position: absolute;
   z-index: 2;
   text-decoration: none;
+}
+.navbar-brand a{
   color: #000;
 }
 .rightCorner{

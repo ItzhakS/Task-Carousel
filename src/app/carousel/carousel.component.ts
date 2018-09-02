@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CarouselConfigService } from '../carousel-config.service';
 import { NgbCarousel, NgbCarouselConfig, NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
-import { HttpClient } from '@angular/common/http';
 import { RequestService } from '../request.service';
 
 
@@ -14,7 +13,6 @@ export class CarouselComponent implements OnInit {
 
   @Input()
 
-  taskObj:object;
   taskArray: Array<any>;
   customersObj:object;
   lessCode = 
@@ -60,7 +58,6 @@ export class CarouselComponent implements OnInit {
   getTasks(){
     this.httpRequest.getTasks()
       .subscribe((data)=> {
-        this.taskObj = data;
         this.taskArray = data["frontend_home_questionnaire"]['tasks'];
       })
   }

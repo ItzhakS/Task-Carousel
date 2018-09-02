@@ -18,22 +18,22 @@
                 <div class="col-7 codeContainer">
                   <h5>Less Code</h5>
                   <pre>
-                      <code [innerHTML]="lessCode"></code>
+                  <code [innerHTML]="lessCode"></code>
                   </pre>
                 </div>
                 <div class="col-5 codeContainer">
                   <h5>Compiles to:</h5>
                   <pre>
-                      <code [innerHTML]="compiledCode"></code>
+                  <code [innerHTML]="compiledCode"></code>
                   </pre>
                   <p>It is a less code snippet/template for box-shadows.</p>
                 </div>
               </div>
             </div>
-            <img *ngIf="i==3" class="catImg" src="{{task['associatedFile']}}" alt="Cat from encoded Base64">
+            <img *ngIf="i==3" class="catImg" src="{{task['associatedFile']}}" alt="Cat from encoded Base64" title="Cat from encoded Base64 image">
             <div class="chineseNewsInfo" *ngIf="i==4">
               <img  class="chineseImg" src="../../assets/chinese-news.png" alt="Random first slide">
-              <ol>
+              <ol class="uxList">
                 <li>The page is too crowded with information</li>
                 <li>Color themes and sections are not being used to direct the user</li>
                 <li>Almost all the text is colored like a link, which is redudant and unappealing</li>
@@ -41,8 +41,9 @@
               </ol>
             </div>
           </div>
-          <div class="countryCardsWrapper" *ngIf="i==1 && customersObj">
-              <div class="countryCards" *ngFor="let country of customersObj['countries']">
+          <div class="container countryCardsWrapper" *ngIf="i==1 && customersObj">
+            <div class="row countryRow">
+              <div class="countryCards col-3" *ngFor="let country of customersObj['countries']">
                 <div class="card">
                   <h4 class="contryName m-4">{{country | uppercase}}</h4>
                   <div class="container">
@@ -55,6 +56,7 @@
                     </ul>
                   </div>
                 </div>
+              </div>
               </div>
           </div>
         </div>
