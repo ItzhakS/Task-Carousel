@@ -5,6 +5,7 @@
   position: absolute;
   z-index: 2;
   text-decoration: none;
+  box-shadow: 1px 1px 7px;
 }
 .navbar-brand a{
   color: #000;
