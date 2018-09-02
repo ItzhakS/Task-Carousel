@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CarouselConfigService } from '../carousel-config.service';
-import { NgbCarousel, NgbCarouselConfig, NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { RequestService } from '../request.service';
 
 
@@ -10,8 +9,6 @@ import { RequestService } from '../request.service';
   styleUrls: ['./carousel.component.css']
 })
 export class CarouselComponent implements OnInit {
-
-  @Input()
 
   taskArray: Array<any>;
   customersObj:object;
@@ -46,9 +43,7 @@ export class CarouselComponent implements OnInit {
     -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   }`;
 
-  constructor(private config: CarouselConfigService, private httpRequest: RequestService ) { 
-    // this.config.inter
-  }
+  constructor(private config: CarouselConfigService, private httpRequest: RequestService ) { }
 
   ngOnInit() {
     this.getTasks();
@@ -72,7 +67,6 @@ export class CarouselComponent implements OnInit {
           this.customersObj['Customers'].forEach(element => {
             if (!countries.includes(element['Country'])) countries.push(element['Country'])
             if (!cities.some(e => e.City == element['City'])){
-            // if (!cities.includes(element['City'])) 
               let city = { 'City': element['City'], 'Country': element['Country'] }
               cities.push(city);
             }
