@@ -1,0 +1,23 @@
+.navbar{
+  height: 61px;
+  background: #fff;
+  opacity: .8;
+  position: absolute;
+  z-index: 2;
+  text-decoration: none;
+  color: #000;
+}
+.rightCorner{
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 61px;
+  width: 126px;
+  background: #fff;
+  opacity: .8;
+  z-index: 2;
+}
+.bsd{
+  margin-right: 0;
+  margin-left: 8px;
+}

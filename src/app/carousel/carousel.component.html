@@ -1,0 +1,64 @@
+<div class="carouselWrapper">
+  <ngb-carousel class="" *ngIf="taskArray">
+    <ng-container *ngFor="let task of taskArray;index as i">
+      <ng-template ngbSlide [id]="i">
+        <div class="carousel-caption">
+          <h3>{{task['taskName']}}</h3>
+          <p>{{task['description']}}</p>
+          <div class="container info">
+            <div *ngIf="i==0">
+              <p >This is an Angular Carousel created with Ng-Bootstrap</p>
+              <img class="boyCarouselImg" src="../../assets/boy-inFront-of-carousel.jpg" alt="boy-inFront-of-carousel">
+            </div>
+            <p *ngIf="task['associatedFile']" class="associatedInfo text-muted">{{task['associatedFile']}}</p>
+          </div>
+          <div class="container content">
+            <div *ngIf="i==2">
+              <div class="row">
+                <div class="col-7 codeContainer">
+                  <h5>Less Code</h5>
+                  <pre>
+                      <code [innerHTML]="lessCode"></code>
+                  </pre>
+                </div>
+                <div class="col-5 codeContainer">
+                  <h5>Compiles to:</h5>
+                  <pre>
+                      <code [innerHTML]="compiledCode"></code>
+                  </pre>
+                  <p>It is a less code snippet/template for box-shadows.</p>
+                </div>
+              </div>
+            </div>
+            <img *ngIf="i==3" class="catImg" src="{{task['associatedFile']}}" alt="Cat from encoded Base64">
+            <div class="chineseNewsInfo" *ngIf="i==4">
+              <img  class="chineseImg" src="../../assets/chinese-news.png" alt="Random first slide">
+              <ol>
+                <li>The page is too crowded with information</li>
+                <li>Color themes and sections are not being used to direct the user</li>
+                <li>Almost all the text is colored like a link, which is redudant and unappealing</li>
+                <li>The site is in Japanese... Perhaps in japan this is a more normal and understable design</li>
+              </ol>
+            </div>
+          </div>
+          <div class="countryCardsWrapper" *ngIf="i==1 && customersObj">
+              <div class="countryCards" *ngFor="let country of customersObj['countries']">
+                <div class="card">
+                  <h4 class="contryName m-4">{{country | uppercase}}</h4>
+                  <div class="container">
+                    <ul class="citiesList">
+                      <div *ngFor="let city of customersObj['cities']">
+                        <li  *ngIf="city['Country']==country" class="cityItem" >
+                          {{city.City}}
+                        </li>
+                      </div>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </ng-template>
+    </ng-container>
+  </ngb-carousel>
+</div>

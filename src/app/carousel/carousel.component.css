@@ -1,0 +1,57 @@
+.carouselWrapper {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+}
+.carousel {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: #24afaf;
+}
+.carousel-inner {
+  display: flex;
+}
+.carousel-caption {
+  position: initial;
+}
+.carousel-inner {
+  overflow: hidden;
+  }
+.associatedInfo{
+  height: 75px;
+  overflow-wrap: break-word;
+}
+.countryCardsWrapper{
+  display: flex;
+  height: 60vh;
+  width: 80%;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+.countryCards{
+  height: 370px;
+  width: 100%;
+  margin: 10px;
+  color: #000;
+}
+.card{
+  height: 100%;
+}
+.citiesList{
+  list-style: none;
+  padding: 0;
+}
+.chineseImg{
+  height: 265px;
+}
+.boyCarouselImg{
+  height: 76vh;
+  width: 38vw;
+}
+.codeContainer{
+  padding: 0;
+}
